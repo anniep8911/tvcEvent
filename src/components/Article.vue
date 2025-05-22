@@ -16,9 +16,7 @@
 </template>
 
 <script setup>
-import '../assets/style/article.scss';
 import Icons from './Icons.vue';
-
 
 const props = defineProps({
   icon: {
@@ -41,3 +39,47 @@ const props = defineProps({
     }
 });
 </script>
+
+<style scoped lang="scss">
+@use '../assets/style/common' as com;
+article{
+    display: flex;
+    width: max(100%,350px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 40px;
+    color: #fff;
+    padding: 10px 0px;
+    h3{
+        display: flex;
+        column-gap: 5px;
+        flex-shrink: 0;
+        span{
+            display: flex;
+            .inner{
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 80px;
+            }
+        }
+    }
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 40px;
+    &.light{
+        background-color: com.$primary;
+    }
+    &.pay{
+        justify-content: space-around;
+        h3{
+            column-gap: 10px;
+            .name{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+</style>

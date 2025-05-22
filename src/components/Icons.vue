@@ -4,7 +4,6 @@
 
 <script setup>
 import '../assets/style/icons.scss';
-import { reactive, computed } from 'vue';
 
 const props = defineProps({
   clName: {

@@ -1,38 +1,87 @@
-import Article from '../components/Article.vue';
+import List from '../components/List.vue';
 
 export default {
   title: 'Compoenets/List',
-  component: Article,
+  component: List,
   tags: ['autodocs'],
-  argTypes: {
-    size: { control: { type: 'select' }, options: ['cash', 'pay'] },
-    light: Boolean
-  },
 };
 
-export const money= {
+export const moneyList = {
   args: {
-    name: '김*영',
-    rank: 1,
-    icon : 'cash',
-    light:false,
-  },
-};
-export const pay= {
+    artType:'money',
+    icon:'cash',
+    person:[
+      {
+      name : '김*영',
+     },
+      {
+      name : '박*진',
+     },
+      {
+      name : '카이*소',
+     },
+      {
+      name : '세레나*메즈',
+     },
+      {
+      name : '감자*끼',
+     },
+      {
+      name : '도*리',
+     },
+      {
+      name : '상*상큼',
+     },
+      {
+      name : '파*',
+     },
+      {
+      name : '파*이',
+     },
+    ]
+  }
+}
+export const payList = {
   args: {
-    name: '김*영',
-    rank: 1,
-    icon : 'emoji1',
-    light:false,
-    time:'2분',
-  },
-};
-export const HightLight= {
-  args: {
-    name: '김*영',
-    rank: 1,
-    icon : 'emoji1',
-    light:true,
-    time:'2분',
-  },
-};
+    artType:'pay',
+    icon:'coin',
+    person:[
+      {
+      name : '김*영',
+      time :'2분'
+     },
+      {
+      name : '박*진',
+      time :'2분'
+     },
+      {
+      name : '카이*소',
+      time :'2분'
+     },
+      {
+      name : '세레나*메즈',
+      time :'2분'
+     },
+      {
+      name : '감자*끼',
+      time :'2분'
+     },
+      {
+      name : '도*리',
+      time :'2분'
+     },
+      {
+      name : '상*상큼',
+      time :'2분'
+     },
+      {
+      name : '파*',
+      time :'2분'
+     },
+      {
+      name : '파*이',
+      time :'2분'
+     },
+    ]
+  }
+}

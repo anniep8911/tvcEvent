@@ -1,4 +1,4 @@
-$basic : #1a82e1;
+@use 'common' as com;
 
 .button{
     border: none;
@@ -6,7 +6,7 @@ $basic : #1a82e1;
     height: 60px;
     width: 280px;
     border-radius: 40px;
-    background: $basic;
+    background: com.$primary;
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;

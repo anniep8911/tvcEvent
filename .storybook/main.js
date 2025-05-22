@@ -14,6 +14,7 @@ const config = {
     name: "@storybook/vue3-vite",
     options: {}
   },
+  
   viteFinal: async (config) => {
     config.base = "/tvcEvent/storybook-static/";
     return config;

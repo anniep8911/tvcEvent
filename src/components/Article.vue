@@ -1,7 +1,7 @@
 <template>
   <article :class="[{light:light},artType]">
     <h3>
-      <Icons :class="icon" size="medium" />
+      <Icons :iconName="icon" size="medium" />
       <template v-if="artType==='pay'">
         <span class="name"><span class="inner">{{ name }} </span> 님</span>
         <span class="msg">네이버페이 1만원 당첨!</span>
@@ -15,29 +15,17 @@
   </article>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Icons from './Icons.vue';
 
-const props = defineProps({
-  icon: {
-      type: String,
-    },
-    name: {
-      type: String
-    },
-    time: {
-      type: String
-    },
-    light: {
-      type: Boolean
-    },
-    rank:{
-      type: Number
-    },
-    artType:{
-      type:String
-    }
-});
+const props = defineProps<{
+    icon: string,
+    name : string,
+    time?: string,
+    light?:boolean,
+    rank:number,
+    artType:string
+  }>();
 </script>
 
 <style scoped lang="scss">

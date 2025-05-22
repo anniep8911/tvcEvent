@@ -1,20 +1,13 @@
 <template>
-  <i :class="clName" :size="size"></i>
+  <i :class="iconName" :size="size"></i>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import '../assets/style/icons.scss';
 
-const props = defineProps({
-  clName: {
-    type: String
-  },
-  size: {
-    type: String,
-    validator: function (value) {
-      return ['small', 'medium', 'large'].indexOf(value) !== -1;
-    },
-  },
 
-});
+const props = defineProps<{
+  iconName : string;
+  size:string;
+}>()
 </script>

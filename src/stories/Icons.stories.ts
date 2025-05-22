@@ -1,27 +1,32 @@
 import Icons from '../components/Icons.vue';
+import type { Meta, StoryObj } from '@storybook/vue3';
+
 const iconClasses = [
   'cash', 'coin', 'emoji1', 'emoji2', 'emoji3', 'emoji4', 'emoji5', 'emoji6'
 ];
 
-const stories={};
-iconClasses.forEach((e)=>{
+const meta: Meta<typeof Icons> = {
+  title: 'Components/Atoms/Icons',
+  component: Icons,
+  tags: ['autodocs'],
+  argTypes: {
+    iconName: { control: { type: 'select' }, options: iconClasses },
+    size: { control: { type: 'select' }, options: ['small', 'medium', 'large'] },
+  },
+}
+
+export default meta;
+
+const stories: Record<string, { args: { iconName: string, size: string } }> = {}
+iconClasses.forEach((e) => {
   stories[e] = {
     args: {
-      clName : e,
+      iconName: e,
       size: 'medium'
     }
   }
 })
 
-export default {
-  title: 'Compoenets/Atoms/Icons',
-  component: Icons,
-  tags: ['autodocs'],
-  argTypes: {
-    clName: { control: { type: 'select' }, options: iconClasses },
-    size: { control: { type: 'select' }, options: ['small', 'medium', 'large'] },
-  },
-};
 
 export const cash = stories.cash;
 export const coin = stories.coin;

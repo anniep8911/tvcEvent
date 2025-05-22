@@ -20,29 +20,24 @@
   </div> 
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Article from './Article.vue';
 
-const props = defineProps({
-  person : {
-      type: [],
-  },
-  icon:{
-    type:String
-  },
-  artType:{
-    type:String
-  }
-})
+const props = defineProps<{
+  person: Array<{ name: string, time?:string}>,
+  icon:string,
+  artType:string
+}>()
 
 
 import { ref } from 'vue'
 
-const scrollBox = ref(null)
+const scrollBox = ref<HTMLElement | null>(null)
 const scrollPosition = ref('top')
 
 const handleScroll = () => {
   const el = scrollBox.value
+  if (!el) return
 
   const isTop = el.scrollTop === 0
   const isBottom = el.scrollTop + el.clientHeight >= el.scrollHeight
@@ -99,7 +94,7 @@ const handleScroll = () => {
     top: 0;
     left: 0;
     height: 100%;
-    background: linear-gradient( rgba(0,0,0,0.5) 1%,transparent 99%);
+    background: linear-gradient( rgba(0,0,0,0.5) 1%,transparent 25%);
     pointer-events: none;
     transition: opacity 0.5s;
   }
@@ -111,7 +106,7 @@ const handleScroll = () => {
     bottom: 0;
     left: 0;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 1%, transparent 20%);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 1%, transparent 25%);
     pointer-events: none; 
     transition: opacity 0.5s;
   }

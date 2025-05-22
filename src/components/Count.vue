@@ -6,16 +6,14 @@
   </article>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
 const money = ref(0)
-// const target = 99741921
-const props = defineProps({
-    target : {
-        type:Number
-    }
-})
+
+const props = defineProps<{
+  target:number
+}>()
 
 onMounted(() => {
   const duration = 1000 // ms
@@ -44,13 +42,14 @@ onMounted(() => {
   article{
     display: block;
     border: 3px solid #999;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     border-radius: 20px;
     padding: 20px 0;
     max-width: 380px;
     h3{
       text-align: center;
       display: block; 
+      color: #fff;
     }
     h4{
       text-align: center;

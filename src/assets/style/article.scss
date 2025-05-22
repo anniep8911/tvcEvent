@@ -7,18 +7,35 @@ article{
     align-items: center;
     column-gap: 5px;
     line-height: 40px;
+    color: #fff;
     h3{
         display: flex;
         column-gap: 5px;
         flex-shrink: 0;
         span{
-            display: block;
+            display: flex;
+            .inner{
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 80px;
+            }
         }
     }
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.7);
     border-radius: 40px;
     &.light{
         background-color: $basic;
-        color: #fff;
+    }
+    &.pay{
+        justify-content: space-around;
+        h3{
+            column-gap: 10px;
+            .name{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
     }
 }

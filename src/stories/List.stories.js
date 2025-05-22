@@ -1,11 +1,11 @@
 import Article from '../components/Article.vue';
 
 export default {
-  title: 'Compoenets/Article',
+  title: 'Compoenets/List',
   component: Article,
   tags: ['autodocs'],
   argTypes: {
-    artType: { control: { type: 'select' }, options: ['cash', 'pay'] },
+    size: { control: { type: 'select' }, options: ['cash', 'pay'] },
     light: Boolean
   },
 };

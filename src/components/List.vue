@@ -1,8 +1,8 @@
 <template>
-  <article :class="[{light:light},artType]">
+  <article :class="[{light:light},{pay:time}]">
     <h3>
       <Icons :class="icon" size="medium" />
-      <template v-if="artType==='pay'">
+      <template v-if="time">
         <span class="name"><span class="inner">{{ name }} </span> 님</span>
         <span class="msg">네이버페이 1만원 당첨!</span>
       </template>
@@ -30,6 +30,9 @@ export default {
     name: {
       type: String
     },
+    msg: {
+      type: String
+    },
     time: {
       type: String
     },
@@ -37,10 +40,7 @@ export default {
       type: Boolean
     },
     rank:{
-      type: Number
-    },
-    artType:{
-      type:String
+      tyepe: Number
     }
   },
 };

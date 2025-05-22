@@ -1,0 +1,24 @@
+$basic : #1a82e1;
+
+article{
+    display: flex;
+    width: max(50%,350px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 40px;
+    h3{
+        display: flex;
+        column-gap: 5px;
+        flex-shrink: 0;
+        span{
+            display: block;
+        }
+    }
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 40px;
+    &.light{
+        background-color: $basic;
+        color: #fff;
+    }
+}

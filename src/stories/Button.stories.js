@@ -1,7 +1,5 @@
 import MyButton from '../components/Button.vue';
 
-const classLists = ['Primary','Sns']
-
 export default {
   title: 'Compoenets/Button',
   component: MyButton,

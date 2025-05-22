@@ -33,176 +33,93 @@ export const RightArrow = () => <svg
 
 <Meta title="Configure your project" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Configure your project
+<div style={{ padding: "32px 24px", fontFamily: "Pretendard, sans-serif" }}>
 
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
-  </div>
-  <div className="sb-section">
-    <div className="sb-section-item">
-      <img
-        src={Styling}
-        alt="A wall of logos representing different styling technologies"
-      />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
-        href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=vue"
-        target="_blank"
-      >Learn more<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img
-        src={Context}
-        alt="An abstraction representing the composition of data for a component"
-      />
-      <h4 className="sb-section-item-heading">Provide context and mocking</h4>
-      <p className="sb-section-item-paragraph">Often when a story doesn't render, it's because your component is expecting a specific environment or context (like a theme provider) to be available.</p>
-      <a
-        href="https://storybook.js.org/docs/writing-stories/decorators/?renderer=vue#context-for-mocking"
-        target="_blank"
-      >Learn more<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img src={Assets} alt="A representation of typography and image assets" />
-      <div>
-        <h4 className="sb-section-item-heading">Load assets and resources</h4>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the
-        `staticDirs` configuration option to specify folders to load when
-        starting Storybook.</p>
-        <a
-          href="https://storybook.js.org/docs/configure/images-and-assets/?renderer=vue"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Do more with Storybook
+  # 🎨 퍼블리싱 컴포넌트 복원 프로젝트
 
-    Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
+  <p style={{
+    fontSize: "16px",
+    lineHeight: "1.6",
+    backgroundColor: "#f9f9f9",
+    padding: "16px",
+    borderRadius: "12px",
+    border: "1px solid #ddd"
+  }}>
+    본 Storybook은 <strong>잡코리아 TVC 이벤트 페이지(Vue 3 기반)</strong> 제작에 참여했던 퍼블리싱 작업 중,  
+    기억을 바탕으로 일부 컴포넌트를 <strong>개인적으로 복원</strong>한 문서입니다.
+  </p>
+
+  <div style={{
+    marginTop: "24px",
+    fontSize: "15px",
+    lineHeight: "1.8"
+  }}>
+    <ul style={{ paddingLeft: "20px" }}>
+      <li>이 문서는 실제 회사에서 사용 중인 자산과는 <strong>직접적인 연관이 없습니다.</strong></li>
+      <li><strong>회사 내부 소스, 디자인, 컨텐츠 등은 일절 포함하지 않았습니다.</strong></li>
+      <li>내가 실무에서 작업했던 UI 구성, 마크업 방식 등을 기반으로 구성한 <strong>순수 개인 포트폴리오</strong>입니다.</li>
+      <li><strong>무단 복제, 재배포는 금지</strong>되며, 오직 참고용으로만 활용 부탁드립니다.</li>
+    </ul>
   </div>
 
-  <div className="sb-section">
-    <div className="sb-features-grid">
-      <div className="sb-grid-item">
-        <img src={Docs} alt="A screenshot showing the autodocs tag being set, pointing a docs page being generated" />
-        <h4 className="sb-section-item-heading">Autodocs</h4>
-        <p className="sb-section-item-paragraph">Auto-generate living,
-          interactive reference documentation from your components and stories.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-docs/autodocs/?renderer=vue"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Share} alt="A browser window showing a Storybook being published to a chromatic.com URL" />
-        <h4 className="sb-section-item-heading">Publish to Chromatic</h4>
-        <p className="sb-section-item-paragraph">Publish your Storybook to review and collaborate with your entire team.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/publish-storybook/?renderer=vue#publish-storybook-with-chromatic"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={FigmaPlugin} alt="Windows showing the Storybook plugin in Figma" />
-        <h4 className="sb-section-item-heading">Figma Plugin</h4>
-        <p className="sb-section-item-paragraph">Embed your stories into Figma to cross-reference the design and live
-          implementation in one place.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/design-integrations/?renderer=vue#embed-storybook-in-figma-with-the-plugin"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Testing} alt="Screenshot of tests passing and failing" />
-        <h4 className="sb-section-item-heading">Testing</h4>
-        <p className="sb-section-item-paragraph">Use stories to test a component in all its variations, no matter how
-          complex.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/?renderer=vue"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Accessibility} alt="Screenshot of accessibility tests passing and failing" />
-        <h4 className="sb-section-item-heading">Accessibility</h4>
-        <p className="sb-section-item-paragraph">Automatically test your components for a11y issues as you develop.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/accessibility-testing/?renderer=vue"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Theming} alt="Screenshot of Storybook in light and dark mode" />
-        <h4 className="sb-section-item-heading">Theming</h4>
-        <p className="sb-section-item-paragraph">Theme Storybook's UI to personalize it to your project.</p>
-        <a
-          href="https://storybook.js.org/docs/configure/theming/?renderer=vue"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
+  <div style={{
+    marginTop: "32px",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "16px"
+  }}>
+    <div style={{
+      flex: "1 1 300px",
+      background: "#fff9ec",
+      border: "1px solid #ffe5a8",
+      borderRadius: "10px",
+      padding: "20px"
+    }}>
+      <h3 style={{ margin: "0 0 8px" }}>🛠 사용 기술</h3>
+      <ul style={{ paddingLeft: "20px", margin: 0 }}>
+        <li>Vue 3 + Composition API</li>
+        <li>Vite 기반 환경</li>
+        <li>Storybook 8.6.4</li>
+        <li>SCSS 모듈</li>
+      </ul>
+    </div>
+
+    <div style={{
+      flex: "1 1 300px",
+      background: "#e9f8ff",
+      border: "1px solid #cceeff",
+      borderRadius: "10px",
+      padding: "20px"
+    }}>
+      <h3 style={{ margin: "0 0 8px" }}>🔎 복원 목적</h3>
+      <p style={{ margin: 0 }}>
+        실무 퍼블리싱 구조와 스타일링 방식을 다시 정리하고,  
+        Vue 컴포넌트 구성 방식과 Storybook 문서화를 <strong>복습 및 기록</strong>하기 위한 개인 프로젝트입니다.
+      </p>
     </div>
   </div>
-</div>
-<div className='sb-addon'>
-  <div className='sb-addon-text'>
-    <h4>Addons</h4>
-    <p className="sb-section-item-paragraph">Integrate your tools with Storybook to connect workflows.</p>
-    <a
-        href="https://storybook.js.org/addons/"
-        target="_blank"
-      >Discover all addons<RightArrow /></a>
+
+  <div style={{ marginTop: "32px" }}>
+    <h3 style={{ fontSize: "20px", marginBottom: "12px" }}>📦 복원한 컴포넌트 종류</h3>
+    <ul style={{ paddingLeft: "20px" }}>
+      <li>🔘 Button / Tag / Toggle</li>
+      <li>💬 Modal / Toast / Tooltip</li>
+      <li>📁 Input / Select / Icon 등</li>
+    </ul>
   </div>
-  <div className='sb-addon-img'>
-    <img src={AddonLibrary} alt="Integrate your tools with Storybook to connect workflows." />
+
+  <div style={{
+    marginTop: "40px",
+    padding: "20px",
+    borderRadius: "12px",
+    background: "#fff0f0",
+    border: "1px solid #ffc8c8"
+  }}>
+    <p style={{ margin: 0, color: "#b30000", fontWeight: "500" }}>
+      ⚠️ 본 문서는 포트폴리오용 개인 복원 자료이며, 상업적 목적이나 무단 사용, 재배포를 금지합니다.
+    </p>
   </div>
-</div>
 
-<div className="sb-section sb-socials">
-    <div className="sb-section-item">
-      <img src={Github} alt="Github logo" className="sb-explore-image"/>
-      Join our contributors building the future of UI development.
-
-      <a
-        href="https://github.com/storybookjs/storybook"
-        target="_blank"
-      >Star on GitHub<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img src={Discord} alt="Discord logo" className="sb-explore-image"/>
-      <div>
-        Get support and chat with frontend developers.
-
-        <a
-          href="https://discord.gg/storybook"
-          target="_blank"
-        >Join Discord server<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Youtube} alt="Youtube logo" className="sb-explore-image"/>
-      <div>
-        Watch tutorials, feature previews and interviews.
-
-        <a
-          href="https://www.youtube.com/@chromaticui"
-          target="_blank"
-        >Watch on YouTube<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Tutorials} alt="A book" className="sb-explore-image"/>
-      <p>Follow guided walkthroughs on for key workflows.</p>
-
-      <a
-          href="https://storybook.js.org/tutorials/"
-          target="_blank"
-        >Discover tutorials<RightArrow /></a>
-    </div>
 </div>
 
 <style>
@@ -279,9 +196,10 @@ export const RightArrow = () => <svg
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     background: #EEF3F8;
-    height: 180px;
+    height: fit-content;
     margin-bottom: 48px;
     overflow: hidden;
+    padding:20px;
   }
 
   .sb-addon-text {

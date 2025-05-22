@@ -15,10 +15,10 @@ const config = {
     options: {}
   },
 
-  // viteFinal: async (config) => {
-  //   config.base = "/tvcEvent/";
-  //   return config;
-  // }
+  viteFinal: async (config) => {
+    config.base = "/tvcEvent/";
+    return config;
+  }
   
 };
 

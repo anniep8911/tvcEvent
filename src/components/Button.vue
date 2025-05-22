@@ -1,14 +1,18 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style" :type="btnType" :disabled="disabled">{{ label
-  }}</button>
+  <button type="button" :class="classes" @click="onClick" :style="style" :type="btnType" :disabled="disabled">
+    <Icons v-if="icon" :class="icon" size="large" />
+    {{ label }}
+  </button>
 </template>
 
 <script>
 import '../assets/style/button.scss';
-import { reactive, computed } from 'vue';
+import { computed } from 'vue';
+import Icons from './Icons.vue';
 
 export default {
   name: 'button',
+  components: { Icons },
   props: {
     label: {
       type: String,
@@ -28,6 +32,9 @@ export default {
     },
     disabled: {
       type: Boolean
+    },
+    icon:{
+      type:String
     }
   },
 
@@ -39,10 +46,7 @@ export default {
         'button': true,
         [`button--${props.size || 'small'}`]: true,
         [`button--${props.btnType || 'normal'}`]: true,
-
-      })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
+        [`button--${props.backgroundColor || 'primary'}`]:true,
       })),
     };
   },

@@ -1,23 +1,21 @@
 <template>
-  <i :class="class" :size="size"></i>
+  <i :class="clName" :size="size"></i>
 </template>
 
-<script>
+<script setup>
 import '../assets/style/icons.scss';
 import { reactive, computed } from 'vue';
 
-export default {
-  name: 'Icon',
-  props: {
-    class: {
-      type: String
-    },
-    size: {
-      type: String,
-      validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
-      },
+const props = defineProps({
+  clName: {
+    type: String
+  },
+  size: {
+    type: String,
+    validator: function (value) {
+      return ['small', 'medium', 'large'].indexOf(value) !== -1;
     },
   },
-};
+
+});
 </script>

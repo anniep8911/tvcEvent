@@ -7,7 +7,7 @@ const stories={};
 iconClasses.forEach((e)=>{
   stories[e] = {
     args: {
-      class : e,
+      clName : e,
       size: 'medium'
     }
   }
@@ -18,7 +18,7 @@ export default {
   component: Icons,
   tags: ['autodocs'],
   argTypes: {
-    class: { control: { type: 'select' }, options: iconClasses },
+    clName: { control: { type: 'select' }, options: iconClasses },
     size: { control: { type: 'select' }, options: ['small', 'medium', 'large'] },
   },
 };

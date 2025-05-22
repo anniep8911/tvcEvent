@@ -1,54 +1,51 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style" :type="btnType" :disabled="disabled">
+  <button
+    :class="classes"
+    @click="onClick"
+    :style="style"
+    :type="btnType"
+    :disabled="disabled"
+  >
     <Icons v-if="icon" :class="icon" size="large" />
     {{ label }}
   </button>
 </template>
 
-<script>
-import '../assets/style/button.scss';
-import { computed } from 'vue';
-import Icons from './Icons.vue';
+<script setup>
+import { computed } from 'vue'
+import Icons from './Icons.vue'
+import '../assets/style/button.scss'
 
-export default {
-  name: 'button',
-  components: { Icons },
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    size: {
-      type: String,
-      validator: function (value) {
-        return ['small', 'large'].indexOf(value) !== -1;
-      },
-    },
-    btnType: {
-      type: String
-    },
-    backgroundColor: {
-      type: String,
-    },
-    disabled: {
-      type: Boolean
-    },
-    icon:{
-      type:String
-    }
+// 1. Props
+const props = defineProps({
+  label: {
+    type: String,
+    required: true,
   },
-
-  emits: ['click'],
-
-  setup(props, { emit }) {
-    return {
-      classes: computed(() => ({
-        'button': true,
-        [`button--${props.size || 'small'}`]: true,
-        [`button--${props.btnType || 'normal'}`]: true,
-        [`button--${props.backgroundColor || 'primary'}`]:true,
-      })),
-    };
+  size: {
+    type: String,
+    validator: (value) => ['small', 'large'].includes(value),
   },
-};
+  btnType: {
+    type: String,
+  },
+  backgroundColor: {
+    type: String,
+  },
+  disabled: {
+    type: Boolean,
+  },
+  icon: {
+    type: String,
+  },
+})
+
+// 3. Classes
+const classes = computed(() => ({
+  button: true,
+  [`button--${props.size || 'small'}`]: true,
+  [`button--${props.btnType || 'normal'}`]: true,
+  [`button--${props.backgroundColor || 'primary'}`]: true,
+}))
+
 </script>

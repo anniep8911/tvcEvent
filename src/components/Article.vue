@@ -15,16 +15,13 @@
   </article>
 </template>
 
-<script>
+<script setup>
 import '../assets/style/article.scss';
 import Icons from './Icons.vue';
 
-export default {
-  name: 'article',
-  components: { Icons },
 
-  props: {
-    icon: {
+const props = defineProps({
+  icon: {
       type: String,
     },
     name: {
@@ -42,6 +39,5 @@ export default {
     artType:{
       type:String
     }
-  },
-};
+});
 </script>

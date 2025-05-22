@@ -1,10 +1,10 @@
 <template>
   <button type="button" :class="classes" @click="onClick" :style="style" :type="btnType" :disabled="disabled">{{ label
-    }}</button>
+  }}</button>
 </template>
 
 <script>
-import './button.scss';
+import '../assets/style/button.scss';
 import { reactive, computed } from 'vue';
 
 export default {

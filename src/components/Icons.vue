@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import './icons.scss';
+import '../assets/style/icons.scss';
 import { reactive, computed } from 'vue';
 
 export default {

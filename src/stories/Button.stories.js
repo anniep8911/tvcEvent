@@ -1,4 +1,4 @@
-import MyButton from './Button.vue';
+import MyButton from '../components/Button.vue';
 
 const classLists = ['Primary','Sns']
 

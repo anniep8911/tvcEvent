@@ -1,4 +1,4 @@
-import Icons from './Icons.vue';
+import Icons from '../components/Icons.vue';
 const iconClasses = [
   'cash', 'coin', 'emoji1', 'emoji2', 'emoji3', 'emoji4', 'emoji5', 'emoji6'
 ];

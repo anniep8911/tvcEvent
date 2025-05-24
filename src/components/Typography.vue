@@ -28,20 +28,18 @@ type TypographyVariant =
   | 'ArticleSubtitleBold'
   | 'BodyTextRegular'
   | 'BodyTextBold'
-  | 'IconTextRegular'
 
 const tagMap: Record<TypographyVariant, string> = {
   HeaderLogoBold: 'h1',
-  HeaderNavBold: 'h2',
-  HeaderNavRegular: 'h3',
-  ContentTitleBold: 'h4',
+  HeaderNavBold: 'h4',
+  HeaderNavRegular: 'h4',
+  ContentTitleBold: 'h2',
   ContentSubtitleBold: 'h4',
   ContentDescriptionRegular: 'p',
-  ArticleTitleBold: 'i',
-  ArticleSubtitleBold: 'i',
+  ArticleTitleBold: 'h3',
+  ArticleSubtitleBold: 'h4',
   BodyTextRegular: 'p',
   BodyTextBold: 'p',
-  IconTextRegular: 'span',
 }
 
 const fallbackMap: Record<TypographyVariant, string> = {
@@ -55,7 +53,6 @@ const fallbackMap: Record<TypographyVariant, string> = {
   ArticleSubtitleBold: '기본 아티클 부제',
   BodyTextRegular: '본문 텍스트',
   BodyTextBold: '강조 텍스트',
-  IconTextRegular: '아이콘 텍스트',
 }
 
 const tag = computed(() => tagMap[props.name as TypographyVariant])

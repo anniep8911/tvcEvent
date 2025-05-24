@@ -13,7 +13,6 @@ const variants = [
     'ArticleSubtitleBold',
     'BodyTextRegular',
     'BodyTextBold',
-    'IconTextRegular',
 ]
 
 
@@ -47,5 +46,4 @@ export const ArticleTitleBold = newStory.ArticleTitleBold;
 export const ArticleSubtitleBold = newStory.ArticleSubtitleBold;
 export const BodyTextRegular = newStory.BodyTextRegular;
 export const BodyTextBold = newStory.BodyTextBold;
-export const IconTextRegular = newStory.IconTextRegular;
 

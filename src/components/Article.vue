@@ -1,5 +1,6 @@
 <template>
   <article :class="[{light:light},artType]">
+    
     <h3>
       <Icons :iconName="icon" size="medium" />
       <template v-if="artType==='pay'">
@@ -17,6 +18,7 @@
 
 <script setup lang="ts">
 import Icons from './Icons.vue';
+import Typography from './Typography.vue';
 
 const props = defineProps<{
     icon: string,

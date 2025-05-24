@@ -10,7 +10,9 @@ const variants = [
     'ContentSubtitleBold',
     'ContentDescriptionRegular',
     'ArticleTitleBold',
+    'ArticleTitleRegular',
     'ArticleSubtitleBold',
+    'ArticleSubtitleRegular',
     'BodyTextRegular',
     'BodyTextBold',
 ]
@@ -28,7 +30,6 @@ export default meta;
 const newStory: Record<string, { args: { name: string } }> = {};
 
 variants.forEach((name) => {
-    console.log(name + '이거확인');
     newStory[name] = {
         args: {
             name: name,
@@ -43,7 +44,11 @@ export const ContentTitleBold = newStory.ContentTitleBold;
 export const ContentSubtitleBold = newStory.ContentSubtitleBold;
 export const ContentDescriptionRegular = newStory.ContentDescriptionRegular;
 export const ArticleTitleBold = newStory.ArticleTitleBold;
+export const ArticleTitleRegular = newStory.ArticleTitleRegular;
 export const ArticleSubtitleBold = newStory.ArticleSubtitleBold;
+export const ArticleSubtitleRegular = newStory.ArticleSubtitleRegular;
 export const BodyTextRegular = newStory.BodyTextRegular;
 export const BodyTextBold = newStory.BodyTextBold;
+
+
 

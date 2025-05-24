@@ -16,9 +16,9 @@ import '../assets/style/button.scss'
 // 1. Props
 const props = defineProps<{
   label: string,
-  size: string,
-  btnType:string,
-  backgroundColor: string,
+  size?: string,
+  btnType?:string,
+  backgroundColor?: string,
   disabled:boolean,
   icon?:string
 }>()

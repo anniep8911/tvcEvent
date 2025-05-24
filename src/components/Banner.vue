@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import {useHighlightedHtml} from '../assets/js/_common'
 
 const props = defineProps<{
     title:string,
@@ -25,25 +25,10 @@ const props = defineProps<{
     backgrond?:string,
     color?:string,
     edge:string,
-    keyword?:Record<string, string>,
+    keyword?:Record<string, string[]>,
   }>();
 
-const highlightedHtml = computed(() => {
-  if (!props.keyword) return props.title;
-
-  let result = props.title;
-
-  const sortedKeywords = Object.keys(props.keyword).sort((a, b) => b.length - a.length);
-
-  sortedKeywords.forEach((word) => {
-    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const color = props.keyword?.[word];
-    const span = `<span style="color: ${color}; font-weight: bold;">${word}</span>`;
-    result = result.replace(new RegExp(`(${escaped})`, 'g'), span);
-  });
-
-  return result;
-});
+  const highlightedHtml = useHighlightedHtml(props.title, props.keyword ?? {})
 
 </script>
 

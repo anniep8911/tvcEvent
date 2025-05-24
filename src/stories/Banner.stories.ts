@@ -20,7 +20,7 @@ export const basic = {
     title: '원픽 바로가기',
     subtitle: '커리어 pick하는',
     char: 'char1',
-    keyword: { "원픽": "blue" },
+    keyword: { "원픽": ["blue", "bold"] },
     backgrond: 'linear-gradient(-90deg, #fff, skyblue)'
   },
 };
@@ -30,7 +30,7 @@ export const left = {
     subtitle: '커리어 pick하는',
     char: 'char1',
     edge: 'left',
-    keyword: { "원픽": "blue" },
+    keyword: { "원픽": ["blue", "bold"] },
     backgrond: 'linear-gradient(-90deg, #fff, skyblue)'
   },
 };
@@ -40,7 +40,7 @@ export const right = {
     subtitle: '커리어 pick하는',
     char: 'char1',
     edge: 'right',
-    keyword: { "원픽": "blue" },
+    keyword: { "원픽": ["blue", "bold"] },
     backgrond: 'linear-gradient(-90deg, #fff, skyblue)'
   },
 };

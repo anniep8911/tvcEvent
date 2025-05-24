@@ -2,7 +2,7 @@ import Article from '../components/Article.vue';
 import type { Meta } from '@storybook/vue3';
 
 const meta: Meta<typeof Article> = {
-  title: 'Components/Article',
+  title: 'Components/Article/Article',
   component: Article,
   tags: ['autodocs'],
   argTypes: {

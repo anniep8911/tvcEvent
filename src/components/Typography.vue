@@ -129,7 +129,7 @@ $font-family-special: 'Orbitron', sans-serif;
 .ArticleTitleBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 40px;
   letter-spacing: -0.5px;
 }
@@ -137,7 +137,7 @@ $font-family-special: 'Orbitron', sans-serif;
 .ArticleTitleRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 40px;
   letter-spacing: -0.5px;
 }
@@ -146,7 +146,7 @@ $font-family-special: 'Orbitron', sans-serif;
   font-family: $font-family-default;
   font-weight: 700;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 30px;
   letter-spacing: -0.4px;
 }
 
@@ -154,7 +154,7 @@ $font-family-special: 'Orbitron', sans-serif;
   font-family: $font-family-default;
   font-weight: 400;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 30px;
   letter-spacing: -0.4px;
 }
 

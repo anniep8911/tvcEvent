@@ -2,12 +2,12 @@
   <div class="banner" :style="[{background : backgrond},{color : color}]" :class="edge">
     <article>
       <div class="texts">
-       <h4>{{ subtitle }}</h4>
+        <Typography name="ArticleSubtitleRegular" > {{ subtitle }}</Typography>
        <template v-if="keyword">
-         <h3 v-html="highlightedHtml"></h3>
-       </template>
-       <template v-esle>
-         <h3> {{ title }}</h3>
+        <Typography name="ArticleTitleBold" v-html="highlightedHtml"/>
+      </template>
+      <template v-else>
+         <Typography name="ArticleTitleBold"> {{ title }} </Typography>
        </template>
       </div>
      <div :class="['image',char]"></div>
@@ -17,6 +17,7 @@
 
 <script setup lang="ts">
 import {useHighlightedHtml} from '../assets/js/_common'
+import Typography from './Typography.vue'
 
 const props = defineProps<{
     title:string,
@@ -48,21 +49,12 @@ const props = defineProps<{
   }
   article{
     max-width: max(300px, 33.33%);
-    padding: 20px 30px;
+    padding: 20px;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-shadow: 1px 1px 1px #333;
-    h3{
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 30px;
-    }
-    h4{
-      font-size: 15px;
-      line-height: 20px;
-    }
     .image{
       width: 30%;
       height: 50px;

@@ -30,6 +30,7 @@ type TypographyVariant =
   | 'ArticleSubtitleRegular'
   | 'BodyTextRegular'
   | 'BodyTextBold'
+  | 'MainTitleText'
 
 const tagMap: Record<TypographyVariant, string> = {
   HeaderLogoBold: 'h1',
@@ -44,6 +45,7 @@ const tagMap: Record<TypographyVariant, string> = {
   ArticleSubtitleRegular: 'h4',
   BodyTextRegular: 'p',
   BodyTextBold: 'p',
+  MainTitleText:'h2',
   
 }
 
@@ -60,6 +62,7 @@ const fallbackMap: Record<TypographyVariant, string> = {
   ArticleSubtitleRegular: '기본 아티클 부제목',
   BodyTextRegular: '본문 텍스트',
   BodyTextBold: '강조 텍스트',
+  MainTitleText:'메인타이틀'
 }
 
 const tag = computed(() => tagMap[props.name as TypographyVariant])
@@ -72,9 +75,14 @@ const hasSlot = computed(() => !!slots.default && slots.default().length > 0)
 
 <style scoped lang="scss">
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
 // 공통 폰트 패밀리
 $font-family-default: 'Pretendard', sans-serif;
 $font-family-special: 'Orbitron', sans-serif;
+$font-family-main:  'Black Han Sans', sans-serif;
+
 
 
 // 타이포그래피
@@ -180,6 +188,13 @@ $font-family-special: 'Orbitron', sans-serif;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.3px;
+}
+
+.MainTitleText{
+  font-size: 50px;
+  line-height: 60px;
+  font-family: $font-family-main;
+  font-weight: 500;
 }
 
 </style>

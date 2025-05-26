@@ -2,11 +2,11 @@ import Icons from '../components/Icons.vue';
 import type { Meta, StoryObj } from '@storybook/vue3';
 
 const iconClasses = [
-  'cash', 'coin', 'emoji1', 'emoji2', 'emoji3', 'emoji4', 'emoji5', 'emoji6'
+  'cash', 'coin', 'emoji1', 'emoji2', 'emoji3', 'emoji4', 'emoji5', 'emoji6', 'onepick'
 ];
 
 const meta: Meta<typeof Icons> = {
-  title: 'Components/Atoms/Icons',
+  title: 'Atoms/Icons',
   component: Icons,
   tags: ['autodocs'],
   argTypes: {
@@ -36,3 +36,4 @@ export const emoji3 = stories.emoji3;
 export const emoji4 = stories.emoji4;
 export const emoji5 = stories.emoji5;
 export const emoji6 = stories.emoji6;
+export const onepick = stories.onepick;

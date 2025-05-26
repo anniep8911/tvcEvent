@@ -49,15 +49,15 @@ const props = defineProps<{
   }
   article{
     max-width: max(300px, 33.33%);
-    padding: 20px;
+    padding: 5px 20px;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-shadow: 1px 1px 1px #333;
     .image{
-      width: 30%;
-      height: 50px;
+      width: 100px;
+      height: 100px;
       @include com.imgInit('contain');
       @for $i from 1 through 3{
         &.char#{$i}{

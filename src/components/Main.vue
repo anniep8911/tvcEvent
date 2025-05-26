@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap" :style="[{background : backgrond}]">
     <main>
-      <Typography name="MainTitleText" v-html="title" :class="`${image}`"></Typography>
+      <Typography name="MainTitleText" v-html="highlightedHtml" :class="`${image}`"/>
       <img :src="imgSrc" alt="메인이미지">
     </main>
   </div>
@@ -9,15 +9,19 @@
 
 <script setup lang="ts">
 import Typography from './Typography.vue'
-
+import {useHighlightedHtml} from '../assets/js/_common'
+import '../assets/style/icons.scss';
 
 const props = defineProps<{
   title:string,
   image:string,
-  backgrond:string
+  backgrond:string,
+  icon?:string,
+  keyword?:Record<string,string[]>
 }>();
 
 const imgSrc = new URL(`../assets/images/${props.image}`, import.meta.url).href;
+const highlightedHtml = useHighlightedHtml(props.title, props.keyword ?? {});
 
 </script>
 

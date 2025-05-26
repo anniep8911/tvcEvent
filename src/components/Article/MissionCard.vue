@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-import Icons from './Icons.vue';
-import Typography from './Typography.vue';
-import Button from './Button.vue';
-import {useHighlightedHtml} from '../assets/js/_common'
+import Icons from '../Icons.vue';
+import Typography from '../Typography.vue';
+import Button from '../Button.vue';
+import {useHighlightedHtml} from '../../assets/js/_common'
 
 const props = defineProps<{
     msg: string,
@@ -33,7 +33,7 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../assets/style/common' as com;
+@use '../../assets/style/common' as com;
 article{
   width: 50%;
   text-align: center;

@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import Icons from './Icons.vue';
-import Typography from './Typography.vue';
+import Icons from '../Icons.vue';
+import Typography from '../Typography.vue';
 
 const props = defineProps<{
     icon: string,
@@ -30,7 +30,7 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../assets/style/common' as com;
+@use '../../assets/style/common' as com;
 article{
     display: flex;
     width: max(100%,350px);

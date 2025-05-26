@@ -25,21 +25,18 @@ export const primary = {
 export const green = {
   args: {
     label: '원픽 챌린지 참여',
-    disabled: false,
     backgroundColor: 'green'
   },
 };
 export const pink = {
   args: {
     label: '원픽 챌린지 참여',
-    disabled: false,
     backgroundColor: 'pink'
   },
 };
 export const gradient = {
   args: {
     label: '원픽 챌린지 참여',
-    disabled: false,
     backgroundColor: 'gradient'
   },
 };
@@ -48,7 +45,15 @@ export const login = {
     label: '로그인하고 원픽 럭키머니뽑기',
     size: 'large',
     btnType: 'sharp',
-    disabled: false,
+    icon: 'coin',
+    backgroundColor: 'dkblue'
+  },
+};
+export const disabled = {
+  args: {
+    label: '로그인하고 원픽 럭키머니뽑기',
+    size: 'large',
+    btnType: 'sharp',
     icon: 'coin',
     backgroundColor: 'dkblue'
   },

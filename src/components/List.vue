@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import Article from './Article.vue';
+import Article from './Article/Article.vue';
 
 const props = defineProps<{
   person: Array<{ name: string, time?:string}>,

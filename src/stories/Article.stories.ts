@@ -1,4 +1,4 @@
-import Article from '../components/Article.vue';
+import Article from '../components/Article/Article.vue';
 import type { Meta } from '@storybook/vue3';
 
 const meta: Meta<typeof Article> = {

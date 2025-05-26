@@ -1,4 +1,12 @@
 @use 'common' as com;
+@mixin disabled(){
+       &:disabled{
+        background: #ccc;
+        color: #fff;
+        cursor: not-allowed;
+    }
+}
+
 
 .button{
     border: none;
@@ -12,11 +20,7 @@
     text-align: center;
     font-size: 22px;
     color: #fff;
-    &:disabled{
-        background: #ccc;
-        color: #fff;
-        cursor: not-allowed;
-    }
+    @include disabled();
     &.button--large{
         font-size: 40px;
         width: 80%;
@@ -46,14 +50,18 @@
     }
     &.button--pink{
         background: #ff73a5;
+         @include disabled();
     }
     &.button--green{
         background: #7bcc6a;
+         @include disabled();
     }
     &.button--dkblue{
         background: #003cff;
+         @include disabled();
     }
     &.button--gradient{
         background: linear-gradient(to right, #bc00a9, #ea001c);
+         @include disabled();
     }
 }

@@ -3,7 +3,7 @@
     <div class="image"></div>
     <div class="texts">
       <Typography name="ArticleTitleRegular" v-html="highlightedHtml"/>
-      <Button :backgroundColor="bgcolor" :disabled="disabled" label="원픽 챌린지 참여" @click="setClick" />
+      <Button :backgroundColor="bgcolor" :disabled="disabled" :label="btnLabel" @click="setClick" />
     </div>
     <div class="coins">
       <Icons iconName="coin" size="medium" />
@@ -22,11 +22,12 @@ import {useHighlightedHtml} from '../../assets/js/_common'
 import { ref } from 'vue';
 
 const props = defineProps<{
-    msg: string,
-    num: number,
-    size:string,
-    bgcolor:string,
-    disabled:boolean,
+    msg: string
+    num: number
+    size:string
+    bgcolor?:string
+    disabled?:boolean
+    btnLabel:string
     keyword?:Record<string,string[]>
   }>();
 
@@ -59,6 +60,12 @@ article{
   text-align: center;
   padding: 40px 0;
   position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  &:nth-of-type(1)~article{
+    border: 2px dotted #ccc;
+    background-color: #fc0;
+  }
   &.large{
     width: 100%;
   }

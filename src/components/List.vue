@@ -14,7 +14,7 @@
         :artType = "artType"
         :rank="person.length - index"
         :light="person.length - index === person.length"
-        :time="(item.time,item.time)"
+        :time="artType === 'pay' ? item.time : undefined"
       />
     </div>
   </div> 
@@ -26,7 +26,7 @@ import Article from './Article/Article.vue';
 const props = defineProps<{
   person: Array<{ name: string, time?:string}>,
   icon:string,
-  artType:string
+  artType:string,
 }>()
 
 
@@ -64,6 +64,7 @@ const handleScroll = () => {
   max-height: 250px;
   overflow: hidden;
   position: relative;
+  background-color: #000;
   .art-group{
     width: 100%;
     display: flex;
@@ -77,11 +78,11 @@ const handleScroll = () => {
     }
 
     &::-webkit-scrollbar {
-      width: 15px;
+      width: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.3); // 스크롤바 색
+      background-color: rgba(255, 255, 255, 0.4); // 스크롤바 색
       border-radius: 6px; // ✅ 둥글게
     }
   }
@@ -94,7 +95,7 @@ const handleScroll = () => {
     top: 0;
     left: 0;
     height: 100%;
-    background: linear-gradient( rgba(0,0,0,0.5) 1%,transparent 25%);
+    background: linear-gradient( rgba(0,0,0,0.6) 10%,transparent 25%);
     pointer-events: none;
     transition: opacity 0.5s;
   }
@@ -106,7 +107,7 @@ const handleScroll = () => {
     bottom: 0;
     left: 0;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 1%, transparent 25%);
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 10%, transparent 25%);
     pointer-events: none; 
     transition: opacity 0.5s;
   }

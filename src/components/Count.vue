@@ -46,6 +46,7 @@ onMounted(() => {
     border-radius: 20px;
     padding: 20px 0;
     max-width: 380px;
+    width: 100%;
     h3{
       text-align: center;
       display: block; 

@@ -4,17 +4,17 @@
 
 <script setup lang="ts">
 import Typography from './Typography.vue';
-import '../assets/style/button.scss'
 
 // 1. Props
 const props = defineProps<{
   menu: string,
-  disabled:boolean,
+  disabled?:boolean,
 }>()
 
 </script>
 
 <style scoped lang="scss">
+@import url('../assets/style/_common.scss');
   h4{
     background-color: #000;
     color: #fff;
@@ -26,8 +26,6 @@ const props = defineProps<{
     &.tab-disabled{
       color: #ccc;
       background-color: #666;
-      cursor: not-allowed;
-      pointer-events: none;
     }
   }
 </style>

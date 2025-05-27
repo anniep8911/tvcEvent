@@ -28,6 +28,7 @@ const highlightedHtml = useHighlightedHtml(props.title, props.keyword ?? {});
 <style scoped lang="scss">
   main{
     width: 80%;
+    max-width: 1080px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;

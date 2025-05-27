@@ -18,7 +18,7 @@ const props = defineProps<{
   color: #FFF;
   text-align: center;
   position: fixed;
-  margin: auto;
+  margin: auto !important;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -29,23 +29,9 @@ const props = defineProps<{
   border-radius: 10px;
   opacity: 0;
   z-index: -1;
+  transition: opacity 0.5s;
   &.active{
-    animation: bake 2s 1 forwards;
+    opacity: 1;
   }
- }
-
- @keyframes bake {
-    0%{
-      opacity: 0;
-      z-index: -1;
-    }
-    50%{
-      opacity: 1;
-      z-index: 3;
-    }
-    100%{
-      opacity: 0;
-      z-index: -1;
-    }
  }
 </style>

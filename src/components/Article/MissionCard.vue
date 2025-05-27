@@ -3,20 +3,23 @@
     <div class="image"></div>
     <div class="texts">
       <Typography name="ArticleTitleRegular" v-html="highlightedHtml"/>
-      <Button :backgroundColor="bgcolor" :disabled="disabled" label="원픽 챌린지 참여" />
+      <Button :backgroundColor="bgcolor" :disabled="disabled" label="원픽 챌린지 참여" @click="setClick" />
     </div>
     <div class="coins">
       <Icons iconName="coin" size="medium" />
       X {{ num }}
     </div>
   </article>
+  <Toast :active="toast" msg="원픽 챌린지에 참여하셨습니다!" />
 </template>
 
 <script setup lang="ts">
 import Icons from '../Icons.vue';
 import Typography from '../Typography.vue';
 import Button from '../Button.vue';
+import Toast from '../Toast.vue';
 import {useHighlightedHtml} from '../../assets/js/_common'
+import { ref } from 'vue';
 
 const props = defineProps<{
     msg: string,
@@ -27,8 +30,25 @@ const props = defineProps<{
     keyword?:Record<string,string[]>
   }>();
 
+  const toast = ref(false);
+  const num = ref(props.num);
+  const disabled = ref(props.disabled);
 
   const highlightedHtml = useHighlightedHtml(props.msg, props.keyword ?? {});
+
+  const setClick=()=>{
+
+      if(!props.disabled){
+        toast.value = true
+        num.value -= 1;     
+        if(!num.value){
+            disabled.value=true
+        }
+        setTimeout(() => {
+          toast.value = false
+      }, 1000)
+    }
+  }
 
 </script>
 

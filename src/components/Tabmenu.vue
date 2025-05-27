@@ -26,6 +26,7 @@ const props = defineProps<{
     &.tab-disabled{
       color: #ccc;
       background-color: #666;
+      cursor: context-menu;
     }
   }
 </style>

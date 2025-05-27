@@ -32,6 +32,7 @@ const props = defineProps<{
   transition: opacity 0.5s;
   &.active{
     opacity: 1;
+    z-index: 3;
   }
  }
 </style>

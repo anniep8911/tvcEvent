@@ -37,7 +37,7 @@
 
 ## 🔗 Storybook 보기
 
-👉 [Storybook 보기](https://your-storybook-link.com)
+👉 [Storybook 보기](https://anniep8911.github.io/tvcEvent/?path=/docs/%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B6%81-%EC%84%A4%EB%AA%85--docs)
 
 ---
 

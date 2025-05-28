@@ -35,12 +35,12 @@ const props = defineProps<{
   .content{
     width: 80%;
     max-width: 1080px;
-   @include com.mob{
-    width: 90%;
-   }
     margin: 0 auto;
     color: #fff;
     text-align: center;
+    @include com.mob{
+      width: 90%;
+    }
     section{
       margin-top: 4rem;
       width: 100%;

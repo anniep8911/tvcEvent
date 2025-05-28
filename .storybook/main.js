@@ -16,8 +16,8 @@ const config = {
   },
 
   viteFinal: async (config) => {
-    config.base = "/tvcEvent/";
-    return config;
+  config.base = "/tvcEvent/";
+  return config;
   }
   
 };

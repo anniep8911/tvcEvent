@@ -1,4 +1,4 @@
-import Tabmenu from '../components/TabMenu.vue';
+import Tabmenu from '../components/Tabmenu.vue';
 import type { Meta } from '@storybook/vue3';
 
 const meta: Meta<typeof Tabmenu> = {

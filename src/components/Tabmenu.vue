@@ -21,7 +21,7 @@ const props = defineProps<{
     text-align: center;
     width: 50%;
     text-transform: capitalize;
-    padding: 20px 0px;
+    padding: 2rem 0px;
     cursor: pointer;
     &.tab-disabled{
       color: #ccc;

@@ -58,27 +58,29 @@ const props = defineProps<{
 article{
   width: 50%;
   text-align: center;
-  padding: 40px 0;
+  padding: 6rem 2.2rem 4rem;
   position: relative;
-  background-color: #fff;
-  border-radius: 20px;
+  @include com.mob{
+    width: 100%;
+  }
   &:nth-of-type(1)~article{
-    border: 2px dotted #ccc;
-    background-color: #fc0;
+    border-top: 1px dotted #ccc;
   }
   &.large{
     width: 100%;
   }
   button{
     margin-top: 20px;
+    width: 100%;
   }
   .coins{
     position: absolute;
     display: flex;
     align-items: center;
-    column-gap: 5px;
-    top: 0px;
-    right: 20px;
+    column-gap: 0.5rem;
+    top: 2rem;
+    right: 2.2rem;
+    font-size: 2rem;
   }
 }
 </style>

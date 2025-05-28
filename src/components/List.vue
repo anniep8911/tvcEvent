@@ -58,8 +58,9 @@ const handleScroll = () => {
 </script>
 
 <style scoped lang="scss">
+@use '../assets/style/common' as com;
 .art-wrap{
-  width: 80%;
+  width: 100%;
   height: 250px;
   max-height: 250px;
   overflow: hidden;

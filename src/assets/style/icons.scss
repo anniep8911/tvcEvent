@@ -1,17 +1,17 @@
 i{
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
    &[size="small"]{
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
     }
     &[size="large"]{
-        width: 50px;
-        height: 50px;
+        width: 5rem;
+        height: 5rem;
     }
     &.cash{
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='41' viewBox='0 0 45 41' fill='none'%3E%3Cpath d='M44.4062 8.15259H0.65625V35.9812H44.4062V8.15259Z' fill='%23009D1E'/%3E%3Cpath d='M44.4062 3.35889H0.65625V31.1875H44.4062V3.35889Z' fill='%233AC84F'/%3E%3Cpath d='M12.9368 14.3393C12.9368 14.3393 11.9389 12.895 9.63677 12.895C7.33466 12.895 6.6628 14.5529 7.05801 15.7837C7.53226 17.2585 9.45892 17.5026 10.9509 17.6959C12.4428 17.8789 13.1245 18.9571 12.8973 20.2082C12.67 21.4694 11.0892 22.3543 9.09335 21.8864C7.10741 21.4185 6.60352 20.3506 6.60352 20.3506' stroke='white' stroke-width='2.1875' stroke-miterlimit='10' stroke-linecap='round'/%3E%3Cpath d='M9.87402 11.2202V12.512' stroke='white' stroke-width='2.1875' stroke-miterlimit='10' stroke-linecap='round'/%3E%3Cpath d='M9.87402 22.1663V23.3156' stroke='white' stroke-width='2.1875' stroke-miterlimit='10' stroke-linecap='round'/%3E%3Cpath d='M30.7211 25.5252C35.1519 25.5252 38.7439 21.8275 38.7439 17.2661C38.7439 12.7048 35.1519 9.00708 30.7211 9.00708C26.2902 9.00708 22.6982 12.7048 22.6982 17.2661C22.6982 21.8275 26.2902 25.5252 30.7211 25.5252Z' fill='%231FB130'/%3E%3Cpath d='M27.1061 3.1709H17.9668V35.9834H27.1061V3.1709Z' fill='%23FFEBB2'/%3E%3Cpath d='M27.1061 31.147H17.9668V35.9885H27.1061V31.147Z' fill='%23FFBF6C'/%3E%3C/svg%3E");

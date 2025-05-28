@@ -21,7 +21,7 @@ time, mark, audio, video ,button, input, textarea{
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	// display: block;
 }
 
 ol, ul {
@@ -58,29 +58,34 @@ $font-family-default: 'Pretendard', sans-serif;
 $font-family-special: 'Orbitron', sans-serif;
 
 // Header
-$h01-font-size: 44px;
-$h01-line-height: 64px;
-$h01-letter-spacing: -1px;
+$h01-font-size: 4.4rem;
+$h01-line-height: 6.4rem;
+$h01-letter-spacing: -0.1rem;
 
-$h02-font-size: 32px;
-$h02-line-height: 48px;
-$h02-letter-spacing: -1px;
+$h02-font-size: 3.2rem;
+$h02-line-height: 4.8rem;
+$h02-letter-spacing: -0.1rem;
 
-$h03-font-size: 24px;
-$h03-line-height: 36px;
-$h03-letter-spacing: -0.5px;
+$h03-font-size: 2.4rem;
+$h03-line-height: 3.6rem;
+$h03-letter-spacing: -0.05rem;
 
 // Body Text
-$body01-font-size: 20px;
-$body01-line-height: 32px;
-$body01-letter-spacing: -0.5px;
+$body01-font-size: 2rem;
+$body01-line-height: 3.2rem;
+$body01-letter-spacing: -0.05rem;
 
 // Caption
-$caption01-font-size: 16px;
-$caption01-line-height: 24px;
-$caption01-letter-spacing: -0.5px;
+$caption01-font-size: 1.6rem;
+$caption01-line-height: 2.4rem;
+$caption01-letter-spacing: -0.05rem;
 
-$caption02-font-size: 14px;
-$caption02-line-height: 20px;
-$caption02-letter-spacing: -0.5px;
+$caption02-font-size: 1.4rem;
+$caption02-line-height: 2rem;
+$caption02-letter-spacing: -0.05rem;
 
+@mixin mob {
+  @media (max-width: 780px) {
+    @content;
+  }
+}

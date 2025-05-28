@@ -89,110 +89,110 @@ $font-family-main:  'Black Han Sans', sans-serif;
 .HeaderLogoBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 44px;
-  line-height: 64px;
-  letter-spacing: -1px;
+  font-size: 4.4rem;
+  line-height: 6.4rem;
+  letter-spacing: -0.1rem;
 }
 
 .HeaderNavBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.5px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.05rem;
 }
 
 .HeaderNavRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.5px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.05rem;
 }
 
 .ContentTitleBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 48px;
-  letter-spacing: -1px;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.1rem;
 }
 
 .ContentSubtitleBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: -0.5px;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.05rem;
 }
 
 .ContentDescriptionRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.4px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.04rem;
 }
 
 .ArticleTitleBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 40px;
-  letter-spacing: -0.5px;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: -0.05rem;
 }
 
 .ArticleTitleRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 40px;
-  letter-spacing: -0.5px;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: -0.05rem;
 }
 
 .ArticleSubtitleBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.4px;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: -0.04rem;
 }
 
 .ArticleSubtitleRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.4px;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: -0.04rem;
 }
 
 .BodyTextRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.3px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.03rem;
 }
 
 .BodyTextBold {
   font-family: $font-family-default;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.3px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.03rem;
 }
 
 .IconTextRegular {
   font-family: $font-family-default;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.3px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: -0.03rem;
 }
 
 .MainTitleText{
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 5rem;
+  line-height: 6rem;
   font-family: $font-family-main;
   font-weight: 500;
 }

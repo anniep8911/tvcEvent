@@ -29,6 +29,7 @@ const props = defineProps<{
   border-radius: 10px;
   opacity: 0;
   z-index: -1;
+  font-size: 1.6rem;
   transition: opacity 0.5s;
   &.active{
     opacity: 1;

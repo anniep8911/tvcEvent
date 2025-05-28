@@ -28,17 +28,21 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
+@use '../assets/style/common' as com;
 .content-wrap{
   background-color: #000;
-  padding-top: 80px;
+  padding: 4rem 0;
   .content{
     width: 80%;
     max-width: 1080px;
+   @include com.mob{
+    width: 90%;
+   }
     margin: 0 auto;
     color: #fff;
     text-align: center;
     section{
-      margin-top: 40px;
+      margin-top: 4rem;
       width: 100%;
       display: flex;
       justify-content: center;

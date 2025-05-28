@@ -33,17 +33,23 @@ const props = defineProps<{
 @use '../../assets/style/common' as com;
 article{
     display: flex;
-    width: max(100%,350px);
+    width: max(100%,35rem);
     justify-content: center;
     align-items: center;
-    column-gap: 5px;
-    line-height: 40px;
+    column-gap: 5rem;
+    line-height: 4rem;
     color: #fff;
     padding: 10px 0px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 4rem;
     h3{
         display: flex;
-        column-gap: 5px;
+        column-gap: 8rem;
         flex-shrink: 0;
+        width: 80%;
+        @include com.mob{
+          column-gap: 2rem;
+        }
         span{
             display: flex;
             .inner{
@@ -51,22 +57,25 @@ article{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                max-width: 80px;
+                max-width: 8rem;
             }
         }
     }
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 40px;
+
     &.light{
         background-color: com.$primary;
     }
     &.pay{
         justify-content: space-around;
+        .time{
+          font-size: 1.6rem;
+        }
         h3{
-            column-gap: 10px;
+            column-gap: 1rem;
             .name{
-                font-size: 18px;
+                font-size: 1.8rem;
                 font-weight: 400;
+                width: 20%;
             }
         }
     }

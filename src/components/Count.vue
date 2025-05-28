@@ -40,17 +40,21 @@ onMounted(() => {
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
   
   article{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     border: 3px solid #999;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 20px;
-    padding: 20px 0;
+    border-radius: 2rem;
+    padding: 2rem 0;
     max-width: 380px;
     width: 100%;
+    justify-content: center;
     h3{
+      width: 100%;
       text-align: center;
       display: block; 
       color: #fff;
+      font-size: 1.6rem;
     }
     h4{
       text-align: center;
@@ -61,13 +65,13 @@ onMounted(() => {
       justify-content: center;
     }
     span{
-        font-size: 20px;
+        font-size: 2.2rem;
         display: block;
         &.num{
-          font-size: 38px;
-          line-height: 50px;
+          font-size: 4rem;
+          line-height: 5rem;
           font-weight: 700;
-          width: 55%;
+          width: 94.7%;
         }
     }
   }

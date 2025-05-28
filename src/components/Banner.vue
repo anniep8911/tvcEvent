@@ -36,7 +36,11 @@ const props = defineProps<{
 <style scoped lang="scss">
 @use '../assets/style/_common.scss' as com;
 .banner{
-  width: calc(100% / 3);
+  width: calc(100% / 3 + 4rem);
+  @include com.mob{
+    width: 100%;
+  }
+
   &.left{
     width: max(calc(((100vw - 80%) / 2 ) + 100% / 3),calc(((100vw - 1080px) / 2 ) + 100% / 3));
     direction: rtl;
@@ -47,17 +51,18 @@ const props = defineProps<{
   &.right{
     width: max(calc(((100vw - 80%) / 2 ) + 100% / 3),calc(((100vw - 1080px) / 2 ) + 100% / 3));
   }
+  
   article{
     max-width: max(300px, 33.33%);
-    padding: 5px 20px;
+    padding: 0.5rem 2rem;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-shadow: 1px 1px 1px #333;
     .image{
-      width: 100px;
-      height: 100px;
+      width: 31.4%;
+      height: 10rem;
       @include com.imgInit('contain');
       @for $i from 1 through 3{
         &.char#{$i}{
@@ -66,6 +71,9 @@ const props = defineProps<{
       }
     }
   
+  @include com.mob{
+   max-width: none;
+  }
   }
 }
 </style>

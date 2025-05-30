@@ -13,6 +13,7 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
+@use '../assets/style/common' as com;
  h5{
   background-color: rgba(0,0,0,0.7);
   color: #FFF;
@@ -34,6 +35,10 @@ const props = defineProps<{
   &.active{
     opacity: 1;
     z-index: 3;
+  }
+
+  @include com.mob{
+    width: 100%;
   }
  }
 </style>

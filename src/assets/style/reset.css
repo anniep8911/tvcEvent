@@ -4,6 +4,6 @@ html{
 
 @media (max-width: 900px){
     html{
-        font-size: max(0.92vw,7.5px);
+        font-size: max(0.92vw,5.5px);
     }
 }

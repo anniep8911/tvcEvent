@@ -39,16 +39,20 @@ article{
     column-gap: 5rem;
     line-height: 4rem;
     color: #fff;
-    padding: 10px 0px;
+    padding: 1rem 0px;
     background-color: rgba(0,0,0,0.7);
     border-radius: 4rem;
+    @include com.mob{
+      column-gap: 1rem;
+      padding: 1rem 0.5rem;
+    }
     h3{
         display: flex;
         column-gap: 8rem;
         flex-shrink: 0;
         width: 80%;
         @include com.mob{
-          column-gap: 2rem;
+          column-gap: 1rem;
         }
         span{
             display: flex;

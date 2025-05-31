@@ -1,4 +1,5 @@
 import { computed, ComputedRef } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 
 /**
  * 문자열 안의 키워드에 색상 강조 스타일을 입힌 HTML 문자열을 반환하는 computed ref
@@ -30,4 +31,12 @@ export function useHighlightedHtml(
 
         return result
     })
+}
+
+// 수정예정
+export function useIsMobile(breakpoint = 768) {
+    const { width } = useWindowSize()
+    // console.log('실행확인')
+    const isMobile = computed(() => width.value <= breakpoint)
+    return { isMobile }
 }

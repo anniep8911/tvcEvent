@@ -2,7 +2,7 @@ import MissionCard from '../components/Article/MissionCard.vue';
 import type { Meta } from '@storybook/vue3';
 
 const meta: Meta<typeof MissionCard> = {
-  title: 'Components/Article/MussionCard',
+  title: 'Components/Article/MissionCard',
   component: MissionCard,
   tags: ['autodocs'],
 }

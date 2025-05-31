@@ -44,12 +44,18 @@ const props = defineProps<{
   &.left{
     width: max(calc(((100vw - 80%) / 2 ) + 100% / 3),calc(((100vw - 1080px) / 2 ) + 100% / 3));
     direction: rtl;
+    @include com.mob{
+      width: 100%;
+    }
     article{
       direction: ltr;
     }
   }
   &.right{
     width: max(calc(((100vw - 80%) / 2 ) + 100% / 3),calc(((100vw - 1080px) / 2 ) + 100% / 3));
+    @include com.mob{
+      width: 100%;
+    }
   }
   
   article{

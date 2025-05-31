@@ -15,39 +15,41 @@ import Accessibility from "./assets/accessibility.png";
 import Theming from "./assets/theming.png";
 import AddonLibrary from "./assets/addon-library.png";
 
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
+export const RightArrow = () => (
+  <svg
+    viewBox="0 0 14 14"
+    width="8px"
+    height="14px"
+    style={{
       marginLeft: '4px',
       display: 'inline-block',
       shapeRendering: 'inherit',
       verticalAlign: 'middle',
       fill: 'currentColor',
-      'path fill': 'currentColor'
     }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+  >
+    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+  </svg>
+);
 
 <Meta title="스토리북 설명" />
 
 <div style={{ padding: "32px 24px", fontFamily: "Pretendard, sans-serif" }}>
 
-  # 🎨 퍼블리싱 컴포넌트 복원 프로젝트
+  <h1>🎨 퍼블리싱 컴포넌트 복원 프로젝트</h1>
 
-  <p style={{
+  <div style={{
     fontSize: "16px",
     lineHeight: "1.6",
     backgroundColor: "#f9f9f9",
     padding: "16px",
     borderRadius: "12px",
-    border: "1px solid #ddd"
+    border: "1px solid #ddd",
+    marginTop: "16px"
   }}>
-    본 Storybook은 <strong>잡코리아 TVC 이벤트 페이지(Vue 3 기반)</strong> 제작에 참여했던 퍼블리싱 작업 중,  
+    본 Storybook은 <strong>잡코리아 TVC 이벤트 페이지(Vue 3 기반)</strong> 제작에 참여했던 퍼블리싱 작업 중,<br />
     기억을 바탕으로 일부 컴포넌트를 <strong>개인적으로 복원</strong>한 문서입니다.
-  </p>
+  </div>
 
   <div style={{
     marginTop: "24px",
@@ -92,17 +94,17 @@ export const RightArrow = () => <svg
       padding: "20px"
     }}>
       <h3 style={{ margin: "0 0 8px" }}>🔎 복원 목적</h3>
-      <p style={{ margin: 0 }}>
-        실무 퍼블리싱 구조와 스타일링 방식을 다시 정리하고,  
+      <div style={{ margin: 0 }}>
+        실무 퍼블리싱 구조와 스타일링 방식을 다시 정리하고,<br />
         Vue 컴포넌트 구성 방식과 Storybook 문서화를 <strong>복습 및 기록</strong>하기 위한 개인 프로젝트입니다.
-      </p>
+      </div>
     </div>
   </div>
 
   <div style={{ marginTop: "32px" }}>
     <h3 style={{ fontSize: "20px", marginBottom: "12px" }}>📦 복원한 컴포넌트 종류</h3>
     <ul style={{ paddingLeft: "20px" }}>
-      <li>🔘 Button /  Icon / Toast</li>
+      <li>🔘 Button / Icon / Toast</li>
       <li>💬 Article / GNB / Content 등</li>
     </ul>
   </div>
@@ -114,9 +116,9 @@ export const RightArrow = () => <svg
     background: "#fff0f0",
     border: "1px solid #ffc8c8"
   }}>
-    <p style={{ margin: 0, color: "#b30000", fontWeight: "500" }}>
+    <div style={{ margin: 0, color: "#b30000", fontWeight: "500" }}>
       ⚠️ 본 문서는 포트폴리오용 개인 복원 자료이며, 상업적 목적이나 무단 사용, 재배포를 금지합니다.
-    </p>
+    </div>
   </div>
 
 </div>
@@ -198,7 +200,7 @@ export const RightArrow = () => <svg
     height: fit-content;
     margin-bottom: 48px;
     overflow: hidden;
-    padding:20px;
+    padding: 20px;
   }
 
   .sb-addon-text {
@@ -271,10 +273,9 @@ export const RightArrow = () => <svg
     .sb-addon-img img {
       width: 1200px;
       transform: rotate(-12deg);
-      margin-left: 0;
+      margin-left: -24px;
       margin-top: 48px;
       margin-bottom: -40px;
-      margin-left: -24px;
     }
   }
   `}

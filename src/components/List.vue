@@ -61,8 +61,8 @@ const handleScroll = () => {
 @use '../assets/style/common' as com;
 .art-wrap{
   width: 100%;
-  height: 250px;
-  max-height: 250px;
+  height: 25rem;
+  // max-height: 250px;
   overflow: hidden;
   position: relative;
   background-color: #000;

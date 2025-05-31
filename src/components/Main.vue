@@ -9,7 +9,8 @@
 
 <script setup lang="ts">
 import Typography from './Typography.vue'
-import {useHighlightedHtml} from '../assets/js/_common'
+import { computed ,watch } from 'vue'
+import {useHighlightedHtml, useIsMobile} from '../assets/js/_common'
 import '../assets/style/icons.scss';
 
 const props = defineProps<{
@@ -23,27 +24,47 @@ const props = defineProps<{
 const imgSrc = new URL(`../assets/images/${props.image}`, import.meta.url).href;
 const highlightedHtml = useHighlightedHtml(props.title, props.keyword ?? {});
 
+// 예시 keyword 분기 처리
+
+
+window.addEventListener('resize',()=>{
+  const isMobile = useIsMobile()
+  console.log(isMobile);
+})
+
 </script>
 
 <style scoped lang="scss">
+@use '../assets/style/common' as com;
   main{
-    width: 80%;
-    max-width: 1080px;
-    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     position: relative;
+    background-color: #f8f7f8;
     h2{
       position: absolute;
       margin: auto;
       top: 0; bottom: 0;
+      left: 5rem;
       height: fit-content;
       color: #333;
-      left: 0;
     }
     img{
       display: block;
       width: 80%;
+    }
+      @include com.mob{
+      display: block;
+      h2{
+        position: relative;
+        padding: 2rem;
+        left: 0;
+        z-index: 2;
+        border: 3rem solid #136fee; 
+      }
+      img{
+        width: 100%;
+      }
     }
   }
 </style>

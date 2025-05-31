@@ -60,8 +60,6 @@ const props = defineProps<{
   .art-wrap{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    max-width: 1080px;
     margin: 0 auto;
     border: 1px solid #efefef;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
